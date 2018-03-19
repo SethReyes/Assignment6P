@@ -63,7 +63,7 @@ ylabel('u')
 title('Ly/4')
 z2=columnPull(Ly/2,u,uExact,Ly,g);
 subplot(2,1,2)
-plot(y,z2(:,1),y,z2(:,2))
+plot(y,z1(:,1),y,z1(:,2))
 legend('Numerical','Theoretical')
 xlabel('y')
 ylabel('u')
@@ -78,13 +78,7 @@ legend('Numerical','Theoretical')
 xlabel('x')
 ylabel('u')
 title('3Lx/4')
-subplot(2,1,2)
-z4=rowPull(2*Lx/4,u,uExact,Lx,h);
-plot(y,z4(:,1),y,z4(:,2))
-legend('Numerical','Theoretical')
-xlabel('x')
-ylabel('u')
-title('Lx/2')
+
 %%Functions
 function z1 = columnPull(col,u,uExact,Ly,g)
 z1=[u(:,round(col/Ly*(g-1))),uExact(:,round(col/Ly*(g-1)))];
